@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>@ViewBag.Title - FUS Starter Template</title>
+  <meta charset="utf-8">
+  <meta name="description" content="A static html template for Franciscan University websites.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body class="list-view">
+  @Html.Partial("_Header")
+  @RenderBody()
+  @Html.Partial("_Footer")
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--uncache-->
+  <!-- build:css Content/style.min.css -->
+  @Styles.Render("~/Content/css")
+  <!-- endbuild -->
+  <!--enduncache-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  @Scripts.Render("~/bundles/app")
+  <!-- endbuild -->
+  @RenderSection("scripts", required: false)
+
+</body>
+</html>
